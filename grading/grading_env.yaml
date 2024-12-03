@@ -1,0 +1,17 @@
+name: grading-env
+channels:
+  - conda-forge
+  - conda-main
+  - conda-shared
+dependencies:
+  - python=3.9
+  - pandas=2.1.*
+  - scikit-learn=1.5.*
+  - numpy=1.25.*
+  - matplotlib=3.8.*
+  - jupyter=1.0.*
+  - pip
+  - jupyterlab=3.6.3
+  - xgboost=2.0.*
+  - lightgbm=3.3.5
+  - catboost=1.2.1
