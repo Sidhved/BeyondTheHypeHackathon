@@ -13,15 +13,15 @@ PREDICTION_WINDOW_MONTHS = [3, 6, 9, 12]  # Constant for this charge-off predict
 def main(test_set_dir: str, results_dir: str):
     
     # Load test set data.
-    #input_df = pd.read_csv(os.path.join(test_set_dir, "inputs.csv"))
+    input_df = pd.read_csv(os.path.join(test_set_dir, "inputs.csv"))
 
     # ---------------------------------
     # START PROCESSING TEST SET INPUTS
 
     model = joblib.load("ha_submission/models/Best_CatBoost_Model.pkl")
 
-    input_df = pd.read_csv("ha_submission/data/processed_inputs.csv")
-    input_df.drop("HadHeartAttack", axis=1, inplace=True)
+    #input_df = pd.read_csv("ha_submission/data/processed_inputs.csv")
+    #input_df.drop("HadHeartAttack", axis=1, inplace=True)
     
 
     patients = list(input_df.PatientID)
